@@ -2,63 +2,94 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-      content="width=device-width,
-      initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control IoT</title>
-    <script
-      src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
-    <script
-      src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+    <meta name="theme-color" content="#F0DB4F">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/png" href="img/jugadores-de-futbol.png">
+    <link rel="apple-touch-icon" href="img/jugadores-de-futbol.png">
+    <link rel="apple-touch-startup-image" href="img/jugadores-de-futbol.png">
+    <link rel="manifest" href="./manifest.json">
+    <script src="./script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
     <script src="js/init.js">
     </script>
-    <link href="css/estilos.css"
-      rel="stylesheet">
-    <script type="module"
-      src="cmp/mi-footer.js">
-      </script>
+    <link href="css/estilos.css" rel="stylesheet">
+    <script type="module" src="cmp/mi-footer.js"></script>
+    <!-- metarial desing links-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </head>
-  <body>
-    <div class="contenido">
-      <h1>Control IoT</h1>
-      <p>
-        <a href="dispositivo.html"
-          target="_blank">Ver
-          dispositivo
-          simulado.</a>
-      </p>
-      <p>
-        <a href="historial.html"
-          target="_blank">Ver
-          historial.</a>
-      </p>
-      <p>
-        <label>
-          Dispositivo
-          <output
-            id="ctDispositivo">
-          </output>
-        </label>
-      </p>
-      <p>
-        <label>
-          Entrada
-          <meter id="ctEntrada"
-            min="0" max="10">
-          </meter>
-        </label>
-      </p>
-      <p>
-        <label>
-          <input id=ctSalida
-            type="checkbox">
-          Salida
-        </label>
-      </p>
-      <mi-footer></mi-footer>
+  
+  <body >
+    <nav>
+      <div class="nav-wrapper red lighten-1">
+        <a href="#" class="brand-logo center">CONTROL IoT</a>
+      </div>
+    </nav>
+  <main class="container">
+    <div class="row">
+      <div class="col s12">
+        <div class="card  deep-purple darken-1 darken-1">
+          <div class="card-content white-text">
+            <span class="card-title " >VER DISPOSITIVO SIMULADO</span>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn btn-floating pulse btn-large pulse" href="dispositivo.html" target="_blank">  
+              <i class="large material-icons">input</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="row">
+      <div class="col s12">
+        <div class="card deep-purple darken-1 darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">VER HISTORIAL</span>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn btn-floating pulse btn-large pulse" href="historial.html"
+            target="_blank">  <i class="large material-icons">list</i></a>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="card-panel">
+        <div class="contenido">
+          <p>
+            <label>
+              Dispositivo
+              <output id="ctDispositivo"></output>
+            </label>
+          </p>
+          <p>
+            <label>
+              Entrada
+              <meter id="ctEntrada" min="0" max="10"></meter>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input id=ctSalida type="checkbox">
+              Salida
+            </label>
+          </p>
+        </div>
+      </div>
+    </div>
+    <mi-footer></mi-footer>
     <script type="module"
       src="js/CtrlMovil.js">
       </script>
+      </main>
   </body>
 </html>
